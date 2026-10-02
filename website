@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joe Pham | Marketing Operations Analyst</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eef2ff',
+                            100: '#e0e7ff',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            900: '#312e81',
+                        },
+                        accent: {
+                            500: '#10b981',
+                            600: '#059669',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(229, 231, 235, 0.8);
+        }
+        .dark .glass-panel {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(51, 65, 85, 0.5);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #4f46e5 0%, #10b981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .dark .gradient-text {
+            background: linear-gradient(135deg, #818cf8 0%, #34d399 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200 font-sans transition-colors duration-300">
+
+    <header class="fixed top-0 left-0 right-0 z-50 glass-panel border-b transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#hero" class="flex items-center gap-2.5 text-xl font-bold tracking-tight">
+                <span class="p-2 bg-brand-600 text-white rounded-xl font-black text-xs shadow-md shadow-brand-500/20">JP</span>
+                <span class="gradient-text font-extrabold">Joe Pham</span>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600 dark:text-slate-300">
+                <a href="#about" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">About & Skills</a>
+                <a href="#experience" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Experience</a>
+                <a href="#projects" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Passion Projects</a>
+                <a href="#contact" class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors">Contact</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <button id="themeToggle" class="p-2.5 rounded-xl bg-slate-200/80 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:scale-105 transition-all border border-slate-300/50 dark:border-slate-700/50" aria-label="Toggle theme">
+                    <i data-lucide="moon" class="w-4 h-4 dark:hidden"></i>
+                    <i data-lucide="sun" class="w-4 h-4 hidden dark:block"></i>
+                </button>
+                <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-brand-600 hover:bg-brand-700 rounded-xl shadow-md shadow-brand-600/20 transition-all hover:-translate-y-0.5">
+                    Get in Touch
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="hero" class="min-h-screen pt-28 pb-16 flex items-center relative overflow-hidden">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-500/10 dark:bg-brand-500/15 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 right-10 w-[400px] h-[400px] bg-accent-500/10 dark:bg-accent-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-50 dark:bg-brand-950/60 border border-brand-200 dark:border-brand-800/60 text-brand-700 dark:text-brand-300 text-xs font-bold mb-6">
+                    <span class="w-2 h-2 rounded-full bg-accent-500 animate-pulse"></span>
+                    Denver, CO • Open to Ops & Analytics Leadership Opportunities
+                </div>
+                
+                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
+                    Joe Pham
+                    <span class="block text-2xl sm:text-4xl font-bold gradient-text mt-2">
+                        Marketing Operations Analyst & Revenue Tech Strategist
+                    </span>
+                </h1>
+
+                <p class="mt-6 text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
+                    Transforming complex martech stacks, automated lifecycle workflows, and SQL data architectures into scalable revenue engines. Proven track record uniting sales ops, marketing automation, and executive BI insights.
+                </p>
+
+                <!-- Key Executive Metrics -->
+                <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4">
+                    <div class="p-4 rounded-2xl bg-white dark:bg-slate-900/80 border border-slate-200/80 dark:border-slate-800 shadow-sm">
+                        <div class="text-2xl font-extrabold text-brand-600 dark:text-brand-400">6+ Years</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400 font-medium mt-1">Marketing Ops & Analytics</div>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-white dark:bg-slate-900/80 border border-slate-200/80 dark:border-slate-800 shadow-sm">
+                        <div class="text-2xl font-extrabold text-accent-500">28% SLA</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400 font-medium mt-1">Faster Lead Velocity</div>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-white dark:bg-slate-900/80 border border-slate-200/80 dark:border-slate-800 shadow-sm col-span-2 sm:col-span-1">
+                        <div class="text-2xl font-extrabold text-indigo-500">FastSpring / SFDC</div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400 font-medium mt-1">Multi-Tool Architecture</div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons & Links -->
+                <div class="mt-8 flex flex-wrap items-center gap-4">
+                    <a href="#projects" class="px-6 py-3.5 rounded-xl font-semibold text-white bg-brand-600 hover:bg-brand-700 transition-all shadow-lg shadow-brand-600/25 flex items-center gap-2">
+                        Explore Passion Projects <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                    <a href="#contact" class="px-6 py-3.5 rounded-xl font-semibold bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-brand-500 dark:hover:border-brand-500 transition-all flex items-center gap-2 shadow-sm">
+                        <i data-lucide="mail" class="w-4 h-4 text-brand-600 dark:text-brand-400"></i> Contact Joe
+                    </a>
+                    <button onclick="downloadResumeSim()" class="px-5 py-3.5 rounded-xl font-semibold text-slate-700 dark:text-slate-300 hover:bg-slate-200/60 dark:hover:bg-slate-800/60 transition-all flex items-center gap-2">
+                        <i data-lucide="download" class="w-4 h-4"></i> Download Resume
+                    </button>
+                </div>
+
+                <!-- Social Links -->
+                <div class="mt-8 flex items-center gap-4 text-slate-500 dark:text-slate-400">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-slate-400">Connect:</span>
+                    <a href="https://linkedin.com" target="_blank" class="p-2 rounded-lg hover:bg-slate-200/60 dark:hover:bg-slate-800/60 hover:text-brand-600 dark:hover:text-brand-400 transition-colors" aria-label="LinkedIn">
+                        <i data-lucide="linkedin" class="w-5 h-5"></i>
+                    </a>
+                    <a href="https://github.com" target="_blank" class="p-2 rounded-lg hover:bg-slate-200/60 dark:hover:bg-slate-800/60 hover:text-brand-600 dark:hover:text-brand-400 transition-colors" aria-label="GitHub">
+                        <i data-lucide="github" class="w-5 h-5"></i>
+                    </a>
+                    <a href="mailto:joe.pham.ops@example.com" class="p-2 rounded-lg hover:bg-slate-200/60 dark:hover:bg-slate-800/60 hover:text-brand-600 dark:hover:text-brand-400 transition-colors" aria-label="Email">
+                        <i data-lucide="mail" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-white dark:bg-slate-900/50 border-y border-slate-200/80 dark:border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-brand-600 dark:text-brand-400 font-semibold text-sm uppercase tracking-wider">Expertise & Core Toolkit</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white mt-2">Marketing Operations & Technical Capabilities</h2>
+                <p class="text-slate-600 dark:text-slate-300 mt-3 text-base">
+                    Combining martech administration, pipeline data integrity, and custom scripts to eliminate operational bottlenecks.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Competency 1 -->
+                <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-4">
+                    <div class="p-3 bg-brand-500/10 text-brand-600 dark:text-brand-400 rounded-xl w-fit">
+                        <i data-lucide="workflow" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">Marketing Ops & Automation</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                        End-to-end management of lead lifecycle routing, multi-tier scoring rules, and automated nurture sequences.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="px-2.5 py-1 text-xs rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-medium">Lead Scoring</span>
+                        <span class="px-2.5 py-1 text-xs rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-medium">HubSpot Workflows</span>
+                        <span class="px-2.5 py-1 text-xs rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-medium">Pardot / Marketo</span>
+                        <span class="px-2.5 py-1 text-xs rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-medium">Zapier & Make</span>
+                        <span class="px-2.5 py-1 text-xs rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-medium">SLA Enforcement</span>
+                    </div>
+                </div>
+
+                <!-- Competency 2 -->
+                <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-4">
+                    <div class="p-3 bg-accent-500/10 text-accent-500 rounded-xl w-fit">
+                        <i data-lucide="database" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">Data Analysis & BI</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                        Building relational query models and dashboard views to measure customer acquisition costs and pipeline attribution.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="px-2.5 py-1 text-xs rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-medium">SQL Queries</span>
+                        <span class="px-2.5 py-1 text-xs rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-medium">Tableau & Power BI</span>
+                        <span class="px-2.5 py-1 text-xs rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-medium">Python (Pandas)</span>
+                        <span class="px-2.5 py-1 text-xs rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-medium">Attribution Modeling</span>
+                        <span class="px-2.5 py-1 text-xs rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-medium">Excel / Google Sheets</span>
+                    </div>
+                </div>
+
+                <!-- Competency 3 -->
+                <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-sm space-y-4">
+                    <div class="p-3 bg-purple-500/10 text-purple-500 rounded-xl w-fit">
+                        <i data-lucide="layers" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">Systems & Integration</h3>
+                    <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                        Connecting enterprise CRM ecosystems, checkout engines, payment platforms, and custom API webhooks.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="px-2.5 py-1 text-xs rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-medium">Salesforce Administration</span>
+                        <span class="px-2.5 py-1 text-xs rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-medium">FastSpring E-Commerce</span>
+                        <span class="px-2.5 py-1 text-xs rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-medium">REST APIs / Webhooks</span>
+                        <span class="px-2.5 py-1 text-xs rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 font-medium">Data Hygiene Routines</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <span class="text-brand-600 dark:text-brand-400 font-semibold text-sm uppercase tracking-wider">Proven Track Record</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white mt-2">Professional Experience</h2>
+                <p class="text-slate-600 dark:text-slate-300 mt-2 text-base">Key roles driving operations, analytics, and revenue architecture.</p>
+            </div>
+
+            <!-- Timeline -->
+            <div class="relative border-l-2 border-slate-200 dark:border-slate-800 ml-4 md:ml-32 space-y-10">
+
+                <!-- FastSpring -->
+                <div class="relative pl-8 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-brand-600 border-4 border-white dark:border-slate-950"></div>
+                    <div class="hidden md:block absolute -left-36 top-1 text-xs font-semibold text-slate-500 dark:text-slate-400 text-right w-24">
+                        2022 — Present
+                    </div>
+                    <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200/90 dark:border-slate-800 shadow-sm">
+                        <span class="md:hidden text-xs font-semibold text-brand-600 dark:text-brand-400 block mb-1">2022 — Present</span>
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Marketing Operations Analyst</h3>
+                            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-brand-50 dark:bg-brand-950 text-brand-700 dark:text-brand-300">FastSpring</span>
+                        </div>
+                        <ul class="mt-4 text-sm text-slate-600 dark:text-slate-300 space-y-2.5 list-disc list-inside">
+                            <li>Architected end-to-end lead lifecycle routing between HubSpot, Salesforce, and internal databases, reducing sales response SLA times by 28%.</li>
+                            <li>Engineered SQL data extraction workflows for Tableau & Power BI, tracking revenue attribution across multi-touch paid and organic channels.</li>
+                            <li>Managed FastSpring's internal marketing technology stack, checkout integrations, and automated customer onboarding workflows.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Cantaloupe -->
+                <div class="relative pl-8 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-accent-500 border-4 border-white dark:border-slate-950"></div>
+                    <div class="hidden md:block absolute -left-36 top-1 text-xs font-semibold text-slate-500 dark:text-slate-400 text-right w-24">
+                        2020 — 2022
+                    </div>
+                    <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200/90 dark:border-slate-800 shadow-sm">
+                        <span class="md:hidden text-xs font-semibold text-accent-500 block mb-1">2020 — 2022</span>
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Revenue Operations Specialist</h3>
+                            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-accent-50 dark:bg-emerald-950 text-accent-700 dark:text-accent-300">Cantaloupe</span>
+                        </div>
+                        <ul class="mt-4 text-sm text-slate-600 dark:text-slate-300 space-y-2.5 list-disc list-inside">
+                            <li>Maintained marketing automation hygiene and scoring algorithms for enterprise B2B IoT solutions.</li>
+                            <li>Standardized opportunity stage transition SLAs between marketing qualified leads (MQL) and sales teams.</li>
+                            <li>Created custom reporting views to track contract renewal cycles and subscription expansion trends.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Epiq Global -->
+                <div class="relative pl-8 group">
+                    <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-purple-500 border-4 border-white dark:border-slate-950"></div>
+                    <div class="hidden md:block absolute -left-36 top-1 text-xs font-semibold text-slate-500 dark:text-slate-400 text-right w-24">
+                        2018 — 2020
+                    </div>
+                    <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200/90 dark:border-slate-800 shadow-sm">
+                        <span class="md:hidden text-xs font-semibold text-purple-500 block mb-1">2018 — 2020</span>
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-lg font-bold text-slate-900 dark:text-white">Marketing Operations Coordinator</h3>
+                            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-purple-50 dark:bg-purple-950 text-purple-700 dark:text-purple-300">Epiq Global</span>
+                        </div>
+                        <ul class="mt-4 text-sm text-slate-600 dark:text-slate-300 space-y-2.5 list-disc list-inside">
+                            <li>Executed campaign execution workflows, automated email nurtures, and CRM data deduplication.</li>
+                            <li>Supported cross-functional sales and marketing reporting across regional legal tech product teams.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 bg-slate-100/70 dark:bg-slate-900/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-brand-600 dark:text-brand-400 font-semibold text-sm uppercase tracking-wider">Hands-On Innovation</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white mt-2">Passion Projects & Creative Side Work</h2>
+                    <p class="text-slate-600 dark:text-slate-300 mt-2 text-base">Exploring technology, hardware, AI automation, and visual design outside office hours.</p>
+                </div>
+
+                <!-- Filter Tabs -->
+                <div class="mt-6 md:mt-0 flex flex-wrap gap-2">
+                    <button onclick="filterProjects('all')" class="proj-tab px-4 py-2 text-xs font-bold rounded-xl bg-brand-600 text-white transition-all shadow-sm" data-cat="all">All Work</button>
+                    <button onclick="filterProjects('tech')" class="proj-tab px-4 py-2 text-xs font-bold rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 transition-all border border-slate-200 dark:border-slate-700" data-cat="tech">Technical & IoT</button>
+                    <button onclick="filterProjects('analytics')" class="proj-tab px-4 py-2 text-xs font-bold rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 transition-all border border-slate-200 dark:border-slate-700" data-cat="analytics">Bots & Analytics</button>
+                    <button onclick="filterProjects('creative')" class="proj-tab px-4 py-2 text-xs font-bold rounded-xl bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 transition-all border border-slate-200 dark:border-slate-700" data-cat="creative">Design & Apparel</button>
+                </div>
+            </div>
+
+            <!-- Projects Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- Project 1 -->
+                <div class="project-card group bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/90 dark:border-slate-800 p-6 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="analytics">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="p-3 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-brand-600 dark:text-brand-400">
+                                <i data-lucide="bot" class="w-6 h-6"></i>
+                            </span>
+                            <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">Python • Gemini API • Raspberry Pi</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
+                            Raspberry Pi Network Security & Discord AI Bot
+                        </h3>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm mt-3 leading-relaxed">
+                            Configured a network-wide DNS filter on a Raspberry Pi 4 to block ad telemetry. Built a custom Python Discord bot integrated with Google's Gemini API to summarize daily network stats and deliver automated system health reports.
+                        </p>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                        <span class="text-xs text-slate-500 flex items-center gap-1"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-accent-500"></i> Active Network Utility</span>
+                        <button onclick="openModal('p1')" class="text-sm font-semibold text-brand-600 dark:text-brand-400 hover:underline inline-flex items-center gap-1">
+                            View Tech Stack <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card group bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/90 dark:border-slate-800 p-6 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="tech">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="p-3 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400">
+                                <i data-lucide="cpu" class="w-6 h-6"></i>
+                            </span>
+                            <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">Matter • Google Home • Webhooks</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-accent-500 transition-colors">
+                            Smart Home Automation & Ecosystem
+                        </h3>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm mt-3 leading-relaxed">
+                            Designed an interconnected smart lighting and security environment running on Matter protocol & Google Home. Built automated routine triggers and custom webhook integrations for energy efficiency.
+                        </p>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                        <span class="text-xs text-slate-500 flex items-center gap-1"><i data-lucide="zap" class="w-3.5 h-3.5 text-amber-500"></i> 14+ Connected Nodes</span>
+                        <button onclick="openModal('p2')" class="text-sm font-semibold text-brand-600 dark:text-brand-400 hover:underline inline-flex items-center gap-1">
+                            View Tech Stack <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card group bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/90 dark:border-slate-800 p-6 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="analytics">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="p-3 rounded-xl bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400">
+                                <i data-lucide="line-chart" class="w-6 h-6"></i>
+                            </span>
+                            <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">SQL • Data Modeling • Attribution</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-blue-500 transition-colors">
+                            SQL Lead Velocity & RevOps Attribution Tool
+                        </h3>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm mt-3 leading-relaxed">
+                            Structured multi-table SQL queries modeling lead-to-opportunity stage velocity, customer acquisition costs (CAC), and channel performance across B2B SaaS buyer journeys.
+                        </p>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                        <span class="text-xs text-slate-500 flex items-center gap-1"><i data-lucide="database" class="w-3.5 h-3.5 text-blue-500"></i> Multi-Touch Modeling</span>
+                        <button onclick="openModal('p3')" class="text-sm font-semibold text-brand-600 dark:text-brand-400 hover:underline inline-flex items-center gap-1">
+                            View Tech Stack <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card group bg-white dark:bg-slate-900 rounded-2xl border border-slate-200/90 dark:border-slate-800 p-6 hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="creative">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="p-3 rounded-xl bg-rose-50 dark:bg-rose-950/60 text-rose-600 dark:text-rose-400">
+                                <i data-lucide="palette" class="w-6 h-6"></i>
+                            </span>
+                            <span class="text-xs font-medium px-2.5 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">Custom Apparel • Graphic Design • Canvas</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-rose-500 transition-colors">
+                            Lion Dance Schedule Tool & Custom Apparel Design
+                        </h3>
+                        <p class="text-slate-600 dark:text-slate-300 text-sm mt-3 leading-relaxed">
+                            Created custom graphics layout tools and athletic team apparel lines for regional performance teams, combining custom vector graphics and automated event schedule poster generation.
+                        </p>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                        <span class="text-xs text-slate-500 flex items-center gap-1"><i data-lucide="sparkles" class="w-3.5 h-3.5 text-rose-500"></i> Creative & Web Tooling</span>
+                        <button onclick="openModal('p4')" class="text-sm font-semibold text-brand-600 dark:text-brand-400 hover:underline inline-flex items-center gap-1">
+                            View Tech Stack <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-slate-900 text-slate-100 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-brand-400 font-semibold text-sm uppercase tracking-wider">Get in Touch</span>
+                    <h2 class="text-3xl font-extrabold text-white">Let's Discuss Marketing Operations & Strategy</h2>
+                    <p class="text-slate-300 text-base leading-relaxed">
+                        Whether you are looking to optimize your martech stack, build SQL data pipelines, or collaborate on tech projects, reach out below!
+                    </p>
+
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-center gap-3">
+                            <span class="p-3 bg-slate-800 rounded-xl text-brand-400"><i data-lucide="map-pin" class="w-5 h-5"></i></span>
+                            <div>
+                                <div class="text-xs text-slate-400">Location</div>
+                                <div class="font-medium text-white">Denver, Colorado</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <span class="p-3 bg-slate-800 rounded-xl text-brand-400"><i data-lucide="mail" class="w-5 h-5"></i></span>
+                            <div>
+                                <div class="text-xs text-slate-400">Email Direct</div>
+                                <a href="mailto:joe.pham.ops@example.com" class="font-medium text-brand-400 hover:underline">joe.pham.ops@example.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <span class="p-3 bg-slate-800 rounded-xl text-brand-400"><i data-lucide="linkedin" class="w-5 h-5"></i></span>
+                            <div>
+                                <div class="text-xs text-slate-400">LinkedIn Profile</div>
+                                <a href="https://linkedin.com" target="_blank" class="font-medium text-brand-400 hover:underline">linkedin.com/in/joe-pham</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="lg:col-span-7">
+                    <form id="contactForm" onsubmit="handleContactSubmit(event)" class="bg-slate-800/80 p-8 rounded-2xl border border-slate-700/60 space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-1">Your Name</label>
+                                <input type="text" required placeholder="Sarah Miller" class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-1">Email Address</label>
+                                <input type="email" required placeholder="sarah@company.com" class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">Subject</label>
+                            <input type="text" required placeholder="Marketing Operations Collaboration" class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">Message</label>
+                            <textarea rows="4" required placeholder="Hi Joe, I would love to connect regarding..." class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3.5 bg-brand-600 hover:bg-brand-700 font-semibold text-white rounded-xl transition-all shadow-lg shadow-brand-600/30 flex items-center justify-center gap-2">
+                            <i data-lucide="send" class="w-4 h-4"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- Footer -->
+            <div class="mt-16 pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+                <div>© 2026 Joe Pham. All rights reserved.</div>
+                <div class="flex items-center gap-4">
+                    <a href="#hero" class="hover:text-slate-200 transition-colors">Back to top ↑</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="projectModal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-slate-900 rounded-2xl max-w-xl w-full border border-slate-200 dark:border-slate-800 p-6 sm:p-8 shadow-2xl relative">
+            <button onclick="closeModal()" class="absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <div id="toast" class="fixed bottom-6 right-6 z-50 hidden bg-slate-900 text-white border border-slate-700 px-5 py-3 rounded-xl shadow-2xl items-center gap-3">
+        <i data-lucide="check-circle" class="w-5 h-5 text-accent-500"></i>
+        <span id="toastMsg" class="text-sm font-medium">Message sent!</span>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        // Dark Mode Switcher
+        const themeToggleBtn = document.getElementById('themeToggle');
+        themeToggleBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+        });
+
+        // Resume Download Trigger
+        function downloadResumeSim() {
+            showToast("Resume download initiated! (Simulated PDF download)");
+        }
+
+        // Contact Form
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            showToast("Message sent! Joe will reply shortly.");
+            document.getElementById('contactForm').reset();
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toastMsg');
+            toastMsg.innerText = msg;
+            toast.classList.remove('hidden');
+            toast.classList.add('flex');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+                toast.classList.remove('flex');
+            }, 3500);
+        }
+
+        // Project Filters
+        function filterProjects(cat) {
+            const cards = document.querySelectorAll('.project-card');
+            const tabs = document.querySelectorAll('.proj-tab');
+
+            tabs.forEach(tab => {
+                if(tab.dataset.cat === cat) {
+                    tab.classList.remove('bg-white', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300');
+                    tab.classList.add('bg-brand-600', 'text-white');
+                } else {
+                    tab.classList.add('bg-white', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300');
+                    tab.classList.remove('bg-brand-600', 'text-white');
+                }
+            });
+
+            cards.forEach(card => {
+                if (cat === 'all' || card.dataset.category === cat) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Modal Content Configuration
+        const projectData = {
+            p1: {
+                title: "Raspberry Pi Network Security & Discord AI Bot",
+                tech: "Python • Gemini API • Raspberry Pi • DNS Filter",
+                summary: "Constructed a local Pi-hole DNS ad-blocker serving as a home network gateway. Built a custom Discord bot powered by Google's Gemini API that monitors adblock telemetry, system CPU load, and responds to Discord voice/chat commands."
+            },
+            p2: {
+                title: "Smart Home Automation & Ecosystem",
+                tech: "Matter Protocol • Google Home • Webhooks • Smart IoT",
+                summary: "Integrated a unified smart home topology utilizing Matter standard protocols. Automated lighting scenes, energy management routines via smart plug meters, and security notification scripts."
+            },
+            p3: {
+                title: "SQL Lead Velocity & RevOps Attribution Tool",
+                tech: "SQL • Multi-Touch Attribution • Data Modeling",
+                summary: "Designed relational database schemas and complex SQL CTE queries modeling lead velocity through MQL -> SQL -> Closed Won pipeline stages across paid, organic, and outbound touchpoints."
+            },
+            p4: {
+                title: "Lion Dance Schedule Tool & Custom Apparel Design",
+                tech: "HTML Canvas • Vector Apparel Design • Tailwind CSS",
+                summary: "Built dynamic canvas poster builders for cultural performance teams and designed technical athletic apparel for regional lion dance troupes."
+            }
+        };
+
+        function openModal(key) {
+            const data = projectData[key];
+            if(!data) return;
+            const container = document.getElementById('modalContent');
+            container.innerHTML = `
+                <div class="space-y-4">
+                    <span class="text-xs font-semibold px-3 py-1 rounded-full bg-brand-100 dark:bg-brand-950 text-brand-700 dark:text-brand-300 inline-block">
+                        ${data.tech}
+                    </span>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">${data.title}</h3>
+                    <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">${data.summary}</p>
+                    <div class="pt-4 flex justify-end">
+                        <button onclick="closeModal()" class="px-5 py-2 rounded-xl bg-slate-200 dark:bg-slate-800 font-semibold text-sm hover:bg-slate-300 dark:hover:bg-slate-700 transition-all">Close</button>
+                    </div>
+                </div>
+            `;
+            document.getElementById('projectModal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('projectModal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
